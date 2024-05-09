@@ -17,7 +17,14 @@ fun main() {
     println("$daypart: ${events.size} events")
 
     println("Last event of the day: ${events.last().title}")
-}
+    }
+
+    val durationOfEvent = if (events[0].duration < 60) {
+        "short"
+    } else {
+        "long"
+    }
+    println("Duration of first event of the day: $durationOfEvent")
 }
 
 data class Event(
@@ -39,4 +46,5 @@ Last event of the day: Eat breakfast
 AFTERNOON: 3 events
 Last event of the day: Watch latest DevBytes video
 EVENING: 1 events
-Last event of the day: Check out latest Android Jetpack library*/
+Last event of the day: Check out latest Android Jetpack library
+Duration of first event of the day: short*/
